@@ -5,14 +5,6 @@ Este repositorio contiene los trabajos prácticos de la materia **Teoría de la 
 - Liam Bialy  
 - Lautaro Fernández  
 - Ezequiel Pulikoski  
-
-<<<<<<< HEAD
-## TP1 - Implementación Comparativa del Cálculo del Factorial en Diferentes Paradigmas de Programación
-
-El primer trabajo práctico consiste en desarrollar un informe comparativo sobre la implementación del cálculo del **factorial de un número** en distintos paradigmas de programación. Este ejercicio tiene como objetivo analizar cómo cada paradigma aborda la resolución de problemas algorítmicos, destacando sus ventajas y desventajas.
-
-### Requisitos del Informe
-=======
 ---
 
 ## TP1
@@ -88,8 +80,6 @@ En este segundo ejercicio se busca comparar **un lenguaje interpretado (Python)*
 ---
 
 ## Estructura del Repositorio
-
->>>>>>> 671a2d15b9dc32233a2ca7a417cbca2c408c1b3c
 
 1. **Definición del Problema**  
    - Explicar qué es el factorial de un número.  
