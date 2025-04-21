@@ -1,13 +1,5 @@
 # Teoría de la Computación - Trabajos Prácticos
 
-Este repositorio contiene los trabajos prácticos de la materia **Teoría de la Computación**, realizados por:
-
-- Liam Bialy  
-- Lautaro Fernández  
-- Ezequiel Pulikoski  
-
-# Teoría de la Computación - Trabajos Prácticos
-
 Este repositorio contiene los trabajos prácticos de la materia **Teoría de la Computación**, realizados por el grupo 04:
 
 - Liam Bialy  
