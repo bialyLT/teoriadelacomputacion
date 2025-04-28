@@ -1,4 +1,4 @@
-// hacer un codigo para pasar de decimal a binario y binario a decimal
+/// hacer un codigo para pasar de decimal a binario y binario a decimal
 
 #include <iostream>
 #include <cmath>

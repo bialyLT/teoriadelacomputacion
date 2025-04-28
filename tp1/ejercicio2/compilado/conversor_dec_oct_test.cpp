@@ -43,7 +43,7 @@ string dec_a_oct(int n) {
 // - Lanza invalid_argument en caso de formato inválido.
 int oct_a_dec(const string& s) {
     if (s.empty()) 
-        throw invalid_argument("Cadena vacía.");
+        throw invalid_argument("Cadena vacia.");
 
     int signo = 1;
     size_t inicio = 0;
@@ -55,14 +55,14 @@ int oct_a_dec(const string& s) {
         inicio = 1;
     }
     if (inicio == s.size())
-        throw invalid_argument("Cadena inválida (solo signo).");
+        throw invalid_argument("Cadena invalida (solo signo).");
 
     int resultado = 0;
     // Iterar sobre cada carácter y acumular el valor decimal
     for (size_t i = inicio; i < s.size(); ++i) {
         char c = s[i];
         if (c < '0' || c > '7')  // validar dígito octal
-            throw invalid_argument("'" + s + "' no es representación octal válida.");
+            throw invalid_argument("'" + s + "' no es representacion octal valida.");
         resultado = resultado * 8 + (c - '0');
     }
     return signo * resultado;
@@ -74,10 +74,10 @@ int oct_a_dec(const string& s) {
 // Muestra un menú, lee la opción del usuario y realiza la conversión o prueba.
 void modo_interactivo() {
     cout << "=== Conversor de Unidades (Decimal ↔ Octal) ===\n";
-    cout << "1) Decimal → Octal\n";
-    cout << "2) Octal → Decimal\n";
+    cout << "1) Decimal a Octal\n";
+    cout << "2) Octal a Decimal\n";
     cout << "3) Ejecutar prueba de rendimiento\n";
-    cout << "Elija una opción (1–3): ";
+    cout << "Elija una opcion (1, 2, 3): ";
 
     string opcion;
     getline(cin, opcion);
@@ -91,12 +91,12 @@ void modo_interactivo() {
 
     // Validar opción 1 ó 2
     if (opcion != "1" && opcion != "2") {
-        cout << "Error: opción '" << opcion << "' no válida.\n";
+    if (opcion != "1" && opcion != "2")
         return;
     }
 
     // Leer el número a convertir
-    cout << "Ingrese el número a convertir: ";
+    cout << "Ingrese el numero a convertir: ";
     string entrada;
     getline(cin, entrada);
 
@@ -104,11 +104,11 @@ void modo_interactivo() {
         if (opcion == "1") {
             // Decimal → Octal
             int n = stoi(entrada);  // puede lanzar invalid_argument
-            cout << n << " (decimal) → " 
+            cout << n << " (decimal) es " 
                  << dec_a_oct(n) << " (octal)\n";
         } else {
             // Octal → Decimal
-            cout << entrada << " (octal) → " 
+            cout << entrada << " (octal) es " 
                  << oct_a_dec(entrada) << " (decimal)\n";
         }
     } catch (const exception& e) {
@@ -159,8 +159,8 @@ void modo_benchmark() {
 
     // Imprimir resultados en formato tabular
     cout << left
-         << setw(15) << "Implementación"
-         << setw(12) << "Función"
+         << setw(15) << "Implementacion"
+         << setw(12) << "Funcion"
          << right << setw(15) << "Tiempo Total(s)"
          << setw(15) << "Llamadas"
          << setw(18) << "Promedio/Llamada(s)"
@@ -169,7 +169,7 @@ void modo_benchmark() {
     // Línea para Dec→Oct
     cout << left
          << setw(15) << "C++"
-         << setw(12) << "Dec→Oct"
+         << setw(12) << "Dec a Oct"
          << right << fixed << setprecision(6) << setw(15) << time_do
          << setw(15) << total_calls
          << setw(18) << scientific << setprecision(6) << avg_do
@@ -178,7 +178,7 @@ void modo_benchmark() {
     // Línea para Oct→Dec
     cout << left
          << setw(15) << "C++"
-         << setw(12) << "Oct→Dec"
+         << setw(12) << "Oct a Dec"
          << right << fixed << setprecision(6) << setw(15) << time_od
          << setw(15) << total_calls
          << setw(18) << scientific << setprecision(6) << avg_od
